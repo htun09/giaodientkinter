@@ -1,0 +1,21 @@
+print('Nhập phương trình bậc 2 th')
+#Su dung ham map() va float de ep kieu du lieu sang so thuc
+#Su dung lam split() de 
+a,b,c=map(float,input().split())
+if a!=0:
+	denta=b*b-4*a*c
+	if denta>=0:
+		x1=(-b+denta**(1/2))/(2*a)
+		x2=(-b-denta**(1/2))/(2*a)
+		print('nghiem la',x1,'va',x2)
+	else:
+		x1=(complex((-b)/(2*a),((-denta)**(1/2))/(2*a)))
+		x2=(complex((-b)/(2*a),(-(-denta)**(1/2))/(2*a)))
+		print('nghiem la',x1,'va',x2) 
+else:
+	if (b==0) and (c!=0):
+		print('vo nghiem')
+	if (b==0) and (c==0):
+		print('tap nghiem la R')
+	if (b!=0):
+		print('nghiem cua pt',-c/b)
